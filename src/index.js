@@ -13,6 +13,13 @@ function updateTime() {
     let parisTime = moment().tz("Europe/Paris")
     parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
     parisTimeElement.innerHTML = parisTime.format("hh:mm:ss [<small>]A[</small>]");
+
+    let tehranElement = document.querySelector("#tehran");
+    let tehranDateElement = tehranElement.querySelector(".date");
+    let tehranTimeElement = tehranElement.querySelector(".time");
+    let tehranTime = moment().tz("Asia/Tehran")
+    tehranDateElement.innerHTML = tehranTime.format("MMMM Do YYYY");
+    tehranTimeElement.innerHTML = tehranTime.format("hh:mm:ss [<small>]A[</small>]");
 }
 
 updateTime();
